@@ -305,6 +305,9 @@ export default class AgendaView extends Component {
 
     return (
       <CalendarList
+          style={{
+            marginTop:5
+          }}
         {...calendarListProps}
         ref={c => (this.calendar = c)}
         current={this.currentMonth}
@@ -386,10 +389,9 @@ export default class AgendaView extends Component {
     const scrollPadPosition = (shouldAllowDragging ? HEADER_HEIGHT : 0) - KNOB_HEIGHT;
     const scrollPadStyle = {
       position: 'absolute',
-      width: 80,
+      width: '100%',
       height: KNOB_HEIGHT,
       top: scrollPadPosition,
-      left: (this.viewWidth - 80) / 2
     };
 
     return (
